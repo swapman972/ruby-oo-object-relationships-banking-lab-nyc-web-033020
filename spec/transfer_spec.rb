@@ -53,6 +53,7 @@ describe 'Transfer' do
     let(:bad_transfer) { Transfer.new(amanda, avi, 4000) }
 
     it "can execute a successful transaction between two accounts" do
+      binding.pry
       transfer.execute_transaction
       expect(amanda.balance).to eq(950)
       expect(avi.balance).to eq(1050)
